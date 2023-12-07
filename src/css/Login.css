@@ -1,0 +1,49 @@
+.loginCenterdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+.loginbox {
+    background-color: #2A2D40;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 30px;
+    color: #fff;
+}
+.loginbox h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.loginbox input {
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.loginbox a {
+    color: #2E6FF2;
+    font-size: 20px;
+    font-weight: 500;
+}
+.loginbox a:hover {
+    color: #2353b2ac;
+}
+#error {
+    color: red;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+}

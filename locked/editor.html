@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="navbar navbar-expand-md navbar-dark" id="Top">
+        <div class="container">
+            <a href="profile" class="navbar-brand"><img src="img/user.png" id="profilepics" alt="Logo"></a>
+            <a href="/" class="navbar-brand text-info">DevDazzle</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span
+                    class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a></li>
+                </ul>
+                <li class="navbar-nav nav-item"><a href="/logout" class="btn btn-outline-info">Logut</a></li>
+            </div>
+        </div>
+    </div>
+    <div class="Editor">
+        <div class="editor-elements">
+            <div class="editor-element">
+                <h1>Html</h1>
+                <div id="html-editor"></div>
+            </div>
+            <div class="editor-element">
+                <h1>Css</h1>
+                <div id="css-editor"></div>
+            </div>
+            <div class="editor-element">
+                <h1>Javascript</h1>
+                <div id="js-editor"></div>
+            </div>
+        </div>
+        <div class="displayP">
+            <h1>Preview</h1>
+            <iframe id="output"
+                sandbox="allow-scripts allow-popups allow-same-origin allow-forms allow-modals"></iframe>
+        </div>
+    </div>
+</body>
+<script src="../js/Editorfunction.js"></script>
+<script src="../js/loadpfp.js"></script>
+
+</html>
