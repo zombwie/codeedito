@@ -43,7 +43,7 @@ const upload = multer({
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'root',
+    password : 'admin',
     database : 'EditorApp'
 });
 
@@ -52,7 +52,7 @@ const sessions = {
 	host: 'localhost',
 	port: 3306,
 	user: 'root',
-	password: 'root',
+	password: 'admin',
 	database: 'sessions'
 };
 const sessionStore = new MySQLStore(sessions);
