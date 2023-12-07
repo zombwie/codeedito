@@ -1,4 +1,4 @@
-// get profile info
+// get profile info and display it on the profile page
 async function getprofileinfo() {
     const options = {
         method: 'GET',

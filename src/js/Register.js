@@ -1,3 +1,4 @@
+// register funcution for the register page
 async function register() {
     let pass = document.getElementById('password').value;
     let username = document.getElementById('username').value;
@@ -21,6 +22,7 @@ async function register() {
         const response = await fetch('/api/register', options);
         const json = await response.json();
         console.log(json);
+        // sort response
         if (response.status == 200) {
             window.location.href = '/dashboard';
         } else if (response.status == 500) {

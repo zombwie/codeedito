@@ -266,7 +266,7 @@ app.post("/uploadProfilePicture",function (req, res, next) {
         
     }) 
 }) 
-
+// dash rute
 app.get('/dashboard', logedincheck, (req, res) => {
     res.sendFile(__dirname + '/locked/dash.html');
 });
@@ -301,7 +301,7 @@ app.get('/editor', logedincheck, (req, res) => {
 });
 
 // start server
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+app.listen(80, () => {
+    console.log('Server running on port 80');
 });
 app.use(express.static('src'));

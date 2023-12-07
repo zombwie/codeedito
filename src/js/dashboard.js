@@ -1,3 +1,4 @@
+// new project button
 async function newproject() {
     const options = {
         method: 'POST',
@@ -38,6 +39,7 @@ async function loadproject() {
 }
 loadproject();
 
+// laster inn prosjektet og viser det i dashboard
 async function loadprojectinfo(projectid) {
     let projectlist = document.getElementById('projectlist');
     const options = {
@@ -87,6 +89,7 @@ async function loadprojectinfo(projectid) {
     projectlist.appendChild(projectpreview);
 }
 
+// delete project
 async function deleteproject(projectid) {
     const options = {
         method: 'POST',
@@ -101,6 +104,7 @@ async function deleteproject(projectid) {
     window.location.href = '/dashboard';
 }
 
+// faq 
 
 const faqItems = document.querySelectorAll('.faq-item');
 

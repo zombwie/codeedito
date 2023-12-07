@@ -1,4 +1,4 @@
-// Initialize Ace Editor instances
+// Initialize Ace Editor instances and set theme and mode
 var htmlEditor = ace.edit("html-editor");
 htmlEditor.setTheme("ace/theme/solarized_dark");
 htmlEditor.session.setMode("ace/mode/html");
@@ -52,7 +52,7 @@ function updateOutput() {
 }
 
 
-// load project
+// load project fra database via id
 var url_string = window.location.href;
 var url = new URL(url_string);
 var id = url.searchParams.get("id");
