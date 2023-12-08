@@ -12,7 +12,11 @@ async function getprofileinfo() {
         console.log(json);
         window.location.href = '/login';
     } else {
+        if (json.userinfo.profilepicId == null) {
+            document.getElementById("profilepics").src = "../img/user.png";
+        } else {
         document.getElementById("profilepics").src = "../img/savedimgs/" + json.userinfo.profilepicId;
+        }
     }
 }
 getprofileinfo();
