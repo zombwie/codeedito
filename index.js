@@ -43,7 +43,7 @@ const upload = multer({
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'admin',
+    password : 'root',
     database : 'EditorApp'
 });
 
@@ -52,7 +52,7 @@ const sessions = {
 	host: 'localhost',
 	port: 3306,
 	user: 'root',
-	password: 'admin',
+	password: 'root',
 	database: 'sessions'
 };
 const sessionStore = new MySQLStore(sessions);
@@ -301,7 +301,9 @@ app.get('/editor', logedincheck, (req, res) => {
 });
 
 // start server
-app.listen(80, () => {
-    console.log('Server running on port 80');
+let port = 3000;
+
+app.listen(3000, () => {
+    console.log('Server running on port ' + port);
 });
 app.use(express.static('src'));
