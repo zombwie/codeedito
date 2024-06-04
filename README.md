@@ -31,42 +31,26 @@ Du skal bruke ferdigheter fra alle programfagene i en samlet løsning bestående
 
 
 
-## Dokumentasjon 
-
-### Uke 48 
-Jeg jobbet med utviklingen av selve prosjektet jeg lagde bruker løsningen lagde kode editoren og dashbordet der man kan få en oversikt over prosjektene sine.  
-
-### Uke 49 
-**Plan fra start av uka:** Jeg skall jobbe med dokumentasjon og og lage opplæringsmateriale for slutt bruker og en lærling. 
-
-**Onsdag setting up server**: 
-jeg installerte ubuntu server på den fysiske serveren min. 
-
-##### Torsdag fortsatt med oppsett av server
-##### Fredag skrev ferdig dokumentasjon.
-
-
-
 ## Teknisk dokumentasjon
 
 |Server | |
 |----|----|
-|Ip|10.0.0.64|
-|User|oliver|
-|pass|admin|
-|admin-pass|admin|
+|Ip|10.2.3.121|
+|User|Oliver|
+|pass|Admin|
+|admin-pass|Admin|
 
 |MySQL | |
 |----|----|
-|Ip|10.0.0.64|
+|Ip|10.2.3.121|
 |User|root|
-|pass|admin|
+|pass|Admin|
 
 |SSH |  |
 |----|----|
-|ip|10.0.0.64:22|
-|User|oliver|
-|pass|admin|
+|ip|10.2.3.121:22|
+|User|Oliver|
+|pass|Admin|
 
 
 
