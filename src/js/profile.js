@@ -19,3 +19,16 @@ async function getprofileinfo() {
     }
 }
 getprofileinfo();
+
+async function føllbruker() {
+    let brukernavn = document.getElementById('brukervillfolle').value;
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ brukernavn: brukernavn })
+    };
+    const response = await fetch('/api/follbruker', options);
+}

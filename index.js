@@ -159,6 +159,31 @@ app.post('/api/newproject', logedincheck, (req, res) => {
     });
 });
 
+app.post('/api/follbruker', logedincheck, (req, res) => {
+    console.log("føllbruker")
+    console.log(req.body)
+    connection.query(`SELECT * FROM kunder WHERE brukernavn = ${connection.escape(req.body.brukernavn)}`, function (error, results, fields) {
+        if (error) {
+            console.log(error);
+            res.status(500).send({ error: 'Something went wrong' });
+        } else {
+            console.log(results) 
+            if (results.length > 0) {
+                connection.query(`INSERT INTO føllere (KundeId, FollerId) VALUES ((SELECT KundeId FROM kunder WHERE brukernavn = ${connection.escape(req.session.username)}), (SELECT KundeId FROM kunder WHERE brukernavn = ${connection.escape(req.body.brukernavn)}))`, function (error, results, fields) {
+                    if (error) {
+                        console.log(error);
+                        res.status(500).send({ error: 'Something went wrong' });
+                    } else {
+                        res.status(200).send({ message: 'User followed' });
+                    }
+                });
+            } else {
+                res.status(401).send({ error: 'User not found' });
+            }
+        }
+    });
+});
+
 app.post('/api/loadproject', logedincheck, (req, res) => {
     // laster inn prosjekt fra database
     connection.query(`SELECT * FROM prosjekter WHERE ProsjektId = ${connection.escape(req.body.id)} AND KundeId = (SELECT KundeId FROM kunder WHERE brukernavn = ${connection.escape(req.session.username)})`, function (error, results, fields) {
